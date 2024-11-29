@@ -1,0 +1,70 @@
+.sidebarTA {
+    width: 400px;
+    height: calc(100vh - 20px);
+    background-color: #697CB1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Transição suave */
+    transform: translateX(0); /* Posiciona o menu à vista */
+    opacity: 1;
+}
+.sidebarTA.hide {
+    transform: translateX(-100%); /* Movimenta o menu para fora da tela */
+    opacity: 0; /* Faz o menu desaparecer suavemente */
+  }
+.headerTA {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #405587;
+}
+.logoTA {
+    width: 170px;
+    margin-left: 50px;
+}
+.XiconTA {
+    width: 20px;
+    height: 20px;
+    margin-right: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.XiconTA img {
+    width: 20px;
+    height: auto;
+}
+.NavegacaoTA {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ItemTA {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+.ItemTA:hover {
+    background-color: #93A5DD; /* Efeito de hover */
+    border-radius: 5px;
+}
+#HomeTA img {
+    width: 35px;
+    height: auto;
+    margin-right: 40px;
+}

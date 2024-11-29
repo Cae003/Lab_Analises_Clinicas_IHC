@@ -1,0 +1,62 @@
+.containerH {
+    width: 100vw;
+}
+.divisa {
+    width: 75px;
+    height: 80px;
+    background-color: #405587;
+    position: fixed;
+    z-index: 4500;
+}
+.header {
+    width: calc(100vw - 75px);
+    height: 80px;
+    position: fixed;
+    left: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 4500;
+}
+.logoH {
+    width: 170px;
+    margin-left: 50px;
+}
+.options {
+    width: 30%;
+    height: 100%;
+    margin-right: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.user-info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.user-info img {
+    margin-right: 10px;
+}
+.user-info span {  
+    color: black;
+    font-weight: bold;
+}
+.user-info span:hover {
+    color: #13315F;
+    text-decoration: underline;
+}
+.logout {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logout img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+.sair{
+    font-weight: bold;
+}

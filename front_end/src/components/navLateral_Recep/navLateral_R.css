@@ -1,0 +1,75 @@
+.sidebar {
+    width: 75px;
+    height: calc(100vh - 100px);
+    background-color: #697CB1;
+    position: fixed;
+    z-index: 4500;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar ul li {
+    width: 75px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+.sidebar ul li:hover {
+    background-color: #93A5DD;
+}
+.Menu img {
+    width: 35px;
+    height: auto;
+}
+/* .Home {
+    background-color: #93A5DD;
+} */
+#Home img {
+    width: 35px;
+    height: auto;
+}
+#TPacientes img {
+    width: 40px;
+    height: auto;
+}
+#CTecnico img {
+    width: 45px;
+    height: auto;
+}
+#NExame img {
+    width: 45px;
+    height: auto;
+}
+.date-time {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.Calendario {
+    width: 40px;
+    height: auto;
+}
+.Hora {
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.Data {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 3px;
+}

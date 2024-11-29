@@ -1,0 +1,95 @@
+.main-contentTP {
+    width: calc(100vw - 155px);
+    height: auto;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 115px;
+    background-color: #CBCBCB;
+    border-radius: 8px;
+}
+.search-barTP {
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-barTP span {
+    font-size: 22px;
+    font-weight: bold;
+}
+.input-containerTP {
+    width: 45%;
+    position: relative;
+}
+.input-containerTP img{
+    width: 25px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-containerTP input {
+    width: 100%;
+    outline: none;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 2px #8f8e8e;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+.input-containerTP input:focus {
+    box-shadow: -2px 2px 2px #707070;
+}
+.search-barTP button {
+    background-color: #405587;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.search-barTP button:hover {
+    background-color: #163681;
+}
+.patient-listTP li {
+    height: 58px;
+    margin-bottom: 2px;
+    background-color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    align-items: center;
+    transition: 0.5s;
+}
+.patient-listTP li:hover {
+    height: 63px;
+    border: 1px solid #000;
+}
+.patient-listTP li img {
+    width: 40px;
+    grid-column: 1 / 2;
+    margin-left: 40px;
+}
+.nomeTP {
+    grid-column: 2 / 5;
+}
+.RP_TP {
+    grid-column: 5 / 8;
+}
+.DNascTP {
+    grid-column: 8 / 11;
+}
+.no-patients-messageTP, #CarregandoTP {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }  

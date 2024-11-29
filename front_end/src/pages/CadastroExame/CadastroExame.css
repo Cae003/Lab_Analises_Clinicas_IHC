@@ -1,0 +1,51 @@
+.main-contentCE {
+    width: calc(100vw - 155px);
+    height: auto;
+    min-height: calc(100vh - 140px);
+    position: absolute;
+    top: 100px;
+    left: 115px;
+    background-color: #CBCBCB;
+    border-radius: 8px;
+    padding: 40px;
+}
+.main-contentCE h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.blocoDadosCE {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+.form-groupCE {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form-groupCE label {
+    font-size: 20px;
+}
+.form-groupCE input {
+    font-size: 15px;
+}
+.edit-buttonCE {
+    display: flex;
+    justify-content: flex-end;
+}
+.edit-buttonCE button {
+    width: 170px;
+    height: 50px;
+    background-color: #405587;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.edit-buttonCE button:hover {
+    background-color: #163681;
+}
