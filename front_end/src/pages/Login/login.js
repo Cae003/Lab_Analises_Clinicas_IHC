@@ -12,11 +12,12 @@ function Login() {
     const [userRegister, setUserRegister] = useState("");
     const [password, setPassword] = useState("");
     const {setUserData} = useContext(UserContext);
+    const [isLoading, setIsLoading] = useState(false); // Estado para verificar se ainda está carregando
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
+        setIsLoading(true);
         try {
             const response = await axios.post(`${apiUrl}/api/login`, {
                 userRegister,
@@ -28,11 +29,12 @@ function Login() {
                 setUserData(response.data); // Armazena a resposta completa no contexto
                 navigate(response.data.accessLevel); // Navega com base no nível de acesso
             } else {
-                alert("Credenciais Inválidas!");
+                alert("Credenciais Inválidas! Veja se às escreveu corretamente ou peça para um Gestor te cadastrar.");
             }
         } catch (error) {
-            alert("Erro ao tentar fazer login. Tente novamente.");
+            alert("Erro ao tentar fazer login. Tente novamente mais tarde.");
         }
+        setIsLoading(false);
     };    
 
     function handleInvalidUserRegister(e) {
@@ -85,6 +87,9 @@ function Login() {
                     </div>
                     <button type="submit" className="button">ACESSAR SISTEMA</button>
                 </form>
+                {isLoading ? (
+                    <p id="CarregandoL">Carregando...</p>
+                ): ""}
             </main>
             <aside id="right"></aside>
         </div>
