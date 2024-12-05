@@ -13,11 +13,16 @@ const Perfil = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userData.userRegister) {
-      fetchUserData(userData.userRegister);
-      setIsLoading(false);
-    }
+    const loadUserData = async () => {
+      if (userData.userRegister) {
+        await fetchUserData(userData.userRegister); // Aguarda os dados serem buscados
+      }
+      setIsLoading(false); // Finaliza o carregamento
+    };
+  
+    loadUserData();
   }, [userData.userRegister, fetchUserData]);
+  
 
   function submitButtom(e) {
     e.preventDefault(); // Previne o recarregamento da página
