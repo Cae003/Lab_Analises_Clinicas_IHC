@@ -3,6 +3,7 @@ import "./Perfil.css";
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
 import NavLateralR from '../../components/navLateral_Recep/navLateral_R';
+import NavLateralTecnico from '../../components/navLateral_Tecnico/navLateral_Tecnico';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../stores/UserStore';
 
@@ -32,7 +33,11 @@ const Perfil = () => {
   return (
     <>
       <Header />
-      <NavLateralR />
+      {userData.accessLevel === "Recepcionista" ? (
+        <NavLateralR />
+      ) : userData.accessLevel === "Tecnico" ? (
+        <NavLateralTecnico />
+      ) : alert("Erro ao Selecionar a Barra Lateral")}
       <main className="main-contentP">
         <h1>Informações do Usuário</h1>
         <form onSubmit={submitButtom}>

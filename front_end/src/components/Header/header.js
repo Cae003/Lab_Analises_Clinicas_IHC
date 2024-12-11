@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "./header.css";
 import Logo from "../../assets/Logo_Definitiva.png";
@@ -8,9 +8,23 @@ import ConfirmaSaida from "../ConfirmaSaida/ConfirmaSaida";
 import { UserContext } from '../../stores/UserStore';
 
 const Header = () => {
+  const [rota, setRota] = useState("")
   const [showModal, setShowModal] = useState(false);
   const { userData } = useContext(UserContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    switch (userData.accessLevel) {
+      case "Recepcionista":
+        setRota("/Recepcionista/Perfil");
+        break;
+      case "Tecnico":
+        setRota("/Tecnico/Perfil");
+        break;
+      default:
+        break;
+    }
+  }, [userData]);
 
   // Funções para manipular o modal
   const handleOpenModal = () => setShowModal(true);
@@ -28,7 +42,7 @@ const Header = () => {
       <header className="header">
         <img className="logoH" src={Logo} alt="Lab Logo"></img>
         <div className="options">
-          <Link style={{ textDecoration: "none" }} to="/Recepcionista/Perfil">
+          <Link style={{ textDecoration: "none" }} to={rota}>
             <div className="user-info">
               <img src={IconUser} alt="Ícone de Usuário"></img>
               <span>
